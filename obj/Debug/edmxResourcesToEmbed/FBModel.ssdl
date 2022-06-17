@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FB_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BankAcc">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kind" Type="tinyint" />
+    <Property Name="Bnak" Type="nvarchar" MaxLength="10" />
+    <Property Name="BranchName" Type="nvarchar" MaxLength="20" />
+    <Property Name="BranchCode" Type="int" />
+    <Property Name="AccNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="DebtCreditAcc">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccCode" Type="tinyint" />
+    <Property Name="DateP" Type="nvarchar" MaxLength="10" />
+    <Property Name="TimeP" Type="nvarchar" MaxLength="10" />
+    <Property Name="Variz_Cash" Type="float" />
+    <Property Name="Bardasht_Cash" Type="float" />
+    <Property Name="FishNumber" Type="int" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="150" />
+    <Property Name="Kind" Type="tinyint" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="DebtCreditKind">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kind" Type="tinyint" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="DebtKInd">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="50" />
+    <Property Name="count" Type="tinyint" />
+    <Property Name="DebtCash" Type="float" />
+    <Property Name="WageCash" Type="float" />
+    <Property Name="ReciveWageKind" Type="tinyint" />
+    <Property Name="Cash" Type="float" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Fromdate" Type="nvarchar" MaxLength="10" />
+    <Property Name="ToDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="DebtMonthlyPayment">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembersCode" Type="int" />
+    <Property Name="DebtCode" Type="int" />
+    <Property Name="DebtDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="DebtDateReal" Type="nvarchar" MaxLength="10" />
+    <Property Name="DebtNumber" Type="tinyint" />
+    <Property Name="DebtCash" Type="float" />
+    <Property Name="PenaltyCash" Type="float" />
+    <Property Name="TotalCash" Type="float" />
+    <Property Name="PayoffCash" Type="float" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNo" Type="int" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="DelayDate" Type="int" />
+  </EntityType>
+  <EntityType Name="DebtMonthTemp">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembershipCode" Type="int" />
+    <Property Name="DebtCode" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Month" Type="tinyint" />
+    <Property Name="CashDefault" Type="float" />
+    <Property Name="CashPayment" Type="float" />
+    <Property Name="Datetemp" Type="nvarchar" MaxLength="10" />
+    <Property Name="TimeTemp" Type="time" Precision="7" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="DebtPayment">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembersCode" Type="int" />
+    <Property Name="DebtKindCode" Type="int" />
+    <Property Name="PaymentDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="paymentTime" Type="nvarchar" MaxLength="8" />
+    <Property Name="StockAvg" Type="float" />
+    <Property Name="DebtCash" Type="float" />
+    <Property Name="DebtPay" Type="float" />
+    <Property Name="DebtWage" Type="float" />
+    <Property Name="DebtWageKind" Type="tinyint" />
+    <Property Name="countt" Type="tinyint" />
+    <Property Name="PaymentCash" Type="float" />
+    <Property Name="CashFirstDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="CashEndDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="LatenPenalty" Type="float" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="PayOffDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="PayOffTime" Type="nvarchar" MaxLength="8" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="ChequeNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="DebtPrint">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Debtcode" Type="int" />
+    <Property Name="Debtnumber" Type="tinyint" />
+    <Property Name="cash1" Type="bigint" />
+    <Property Name="debt1" Type="int" />
+    <Property Name="cash2" Type="bigint" />
+  </EntityType>
+  <EntityType Name="EventsDescription">
+    <Key>
+      <PropertyRef Name="LogCode" />
+    </Key>
+    <Property Name="LogCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="EventsLog">
+    <Key>
+      <PropertyRef Name="EventsLogCode" />
+    </Key>
+    <Property Name="EventsLogCode" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usercode" Type="nvarchar" MaxLength="10" />
+    <Property Name="logdate" Type="nvarchar" MaxLength="10" />
+    <Property Name="logtime" Type="nvarchar" MaxLength="10" />
+    <Property Name="LogCode" Type="int" />
+    <Property Name="Ipadress" Type="nvarchar" MaxLength="15" />
+    <Property Name="changecode" Type="int" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NationalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="BirthDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="IdentityNumber" Type="nvarchar" MaxLength="10" />
+    <Property Name="Sex" Type="bit" />
+    <Property Name="Relation" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="MembershipDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="MembershipTime" Type="nvarchar" MaxLength="10" />
+    <Property Name="MembershipDateCancel" Type="nvarchar" MaxLength="10" />
+    <Property Name="MainMemberShip" Type="int" />
+    <Property Name="userCode" Type="int" />
+    <Property Name="ipadress" Type="nvarchar" MaxLength="15" />
+    <Property Name="deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="MemberShipRight">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cashfixed" Type="float" />
+    <Property Name="Year" Type="int" />
+    <Property Name="FromDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="Todate" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="MonthPayment">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cashfixed" Type="float" />
+    <Property Name="Year" Type="int" />
+    <Property Name="FromDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="Todate" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="PaymentMembers">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembersCode" Type="int" />
+    <Property Name="PaymentDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="PaymentTime" Type="nvarchar" MaxLength="10" />
+    <Property Name="Cash" Type="float" />
+    <Property Name="kind" Type="tinyint" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Month" Type="tinyint" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="SerialNo" Type="int" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PaymentMonthTemp">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembershipCode" Type="int" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Month" Type="tinyint" Nullable="false" />
+    <Property Name="CashDefault" Type="float" />
+    <Property Name="CashPayment" Type="float" />
+    <Property Name="Datetemp" Type="nvarchar" MaxLength="10" />
+    <Property Name="TimeTemp" Type="time" Precision="7" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="RequestCheck">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccCode" Type="tinyint" />
+    <Property Name="CheckNumberFrom" Type="int" />
+    <Property Name="CheckNumberTo" Type="int" />
+    <Property Name="countt" Type="tinyint" />
+    <Property Name="Delivery_date" Type="nvarchar" MaxLength="15" />
+    <Property Name="transferee_user" Type="int" />
+    <Property Name="Usercode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="SignaturesAcc">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MembersCode" Type="int" />
+    <Property Name="AccCode" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="FromDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="ToDate" Type="nvarchar" MaxLength="10" />
+    <Property Name="Deleted" Type="bit" />
+    <Property Name="UserCode" Type="int" />
+    <Property Name="IpAdress" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TblUsers">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="15" />
+    <Property Name="Password" Type="nvarchar" MaxLength="10" />
+    <Property Name="AccesLevel" Type="tinyint" />
+  </EntityType>
+  <Association Name="FK_DebtCreditAcc_BankAcc">
+    <End Role="BankAcc" Type="Self.BankAcc" Multiplicity="0..1" />
+    <End Role="DebtCreditAcc" Type="Self.DebtCreditAcc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAcc">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtCreditAcc">
+        <PropertyRef Name="AccCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebtCreditAcc_DebtCreditKind">
+    <End Role="DebtCreditKind" Type="Self.DebtCreditKind" Multiplicity="0..1" />
+    <End Role="DebtCreditAcc" Type="Self.DebtCreditAcc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DebtCreditKind">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtCreditAcc">
+        <PropertyRef Name="Kind" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebtMonthlyPayment_DebtPayment">
+    <End Role="DebtPayment" Type="Self.DebtPayment" Multiplicity="0..1" />
+    <End Role="DebtMonthlyPayment" Type="Self.DebtMonthlyPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DebtPayment">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtMonthlyPayment">
+        <PropertyRef Name="DebtCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebtMonthlyPayment_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
+    <End Role="DebtMonthlyPayment" Type="Self.DebtMonthlyPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtMonthlyPayment">
+        <PropertyRef Name="MembersCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebtPayment_DebtKInd">
+    <End Role="DebtKInd" Type="Self.DebtKInd" Multiplicity="0..1" />
+    <End Role="DebtPayment" Type="Self.DebtPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DebtKInd">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtPayment">
+        <PropertyRef Name="DebtKindCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DebtPayment_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
+    <End Role="DebtPayment" Type="Self.DebtPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="DebtPayment">
+        <PropertyRef Name="MembersCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EventsLog_EventsDescription">
+    <End Role="EventsDescription" Type="Self.EventsDescription" Multiplicity="0..1" />
+    <End Role="EventsLog" Type="Self.EventsLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventsDescription">
+        <PropertyRef Name="LogCode" />
+      </Principal>
+      <Dependent Role="EventsLog">
+        <PropertyRef Name="LogCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PaymentMembers_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
+    <End Role="PaymentMembers" Type="Self.PaymentMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="PaymentMembers">
+        <PropertyRef Name="MembersCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestCheck_BankAcc">
+    <End Role="BankAcc" Type="Self.BankAcc" Multiplicity="0..1" />
+    <End Role="RequestCheck" Type="Self.RequestCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAcc">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="RequestCheck">
+        <PropertyRef Name="AccCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignaturesAcc_BankAcc">
+    <End Role="BankAcc" Type="Self.BankAcc" Multiplicity="0..1" />
+    <End Role="SignaturesAcc" Type="Self.SignaturesAcc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAcc">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="SignaturesAcc">
+        <PropertyRef Name="AccCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SignaturesAcc_Members">
+    <End Role="Members" Type="Self.Members" Multiplicity="0..1" />
+    <End Role="SignaturesAcc" Type="Self.SignaturesAcc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Members">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="SignaturesAcc">
+        <PropertyRef Name="MembersCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DebtInsertprint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DebtCash" Type="int" Mode="In" />
+    <Parameter Name="debtpayment" Type="int" Mode="In" />
+    <Parameter Name="debtcount" Type="int" Mode="In" />
+    <Parameter Name="debtcode" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="FB_ModelStoreContainer">
+    <EntitySet Name="BankAcc" EntityType="Self.BankAcc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtCreditAcc" EntityType="Self.DebtCreditAcc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtCreditKind" EntityType="Self.DebtCreditKind" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtKInd" EntityType="Self.DebtKInd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtMonthlyPayment" EntityType="Self.DebtMonthlyPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtMonthTemp" EntityType="Self.DebtMonthTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtPayment" EntityType="Self.DebtPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DebtPrint" EntityType="Self.DebtPrint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventsDescription" EntityType="Self.EventsDescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EventsLog" EntityType="Self.EventsLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MemberShipRight" EntityType="Self.MemberShipRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonthPayment" EntityType="Self.MonthPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMembers" EntityType="Self.PaymentMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentMonthTemp" EntityType="Self.PaymentMonthTemp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestCheck" EntityType="Self.RequestCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SignaturesAcc" EntityType="Self.SignaturesAcc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUsers" EntityType="Self.TblUsers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DebtCreditAcc_BankAcc" Association="Self.FK_DebtCreditAcc_BankAcc">
+      <End Role="BankAcc" EntitySet="BankAcc" />
+      <End Role="DebtCreditAcc" EntitySet="DebtCreditAcc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebtCreditAcc_DebtCreditKind" Association="Self.FK_DebtCreditAcc_DebtCreditKind">
+      <End Role="DebtCreditKind" EntitySet="DebtCreditKind" />
+      <End Role="DebtCreditAcc" EntitySet="DebtCreditAcc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebtMonthlyPayment_DebtPayment" Association="Self.FK_DebtMonthlyPayment_DebtPayment">
+      <End Role="DebtPayment" EntitySet="DebtPayment" />
+      <End Role="DebtMonthlyPayment" EntitySet="DebtMonthlyPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebtMonthlyPayment_Members" Association="Self.FK_DebtMonthlyPayment_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="DebtMonthlyPayment" EntitySet="DebtMonthlyPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebtPayment_DebtKInd" Association="Self.FK_DebtPayment_DebtKInd">
+      <End Role="DebtKInd" EntitySet="DebtKInd" />
+      <End Role="DebtPayment" EntitySet="DebtPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DebtPayment_Members" Association="Self.FK_DebtPayment_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="DebtPayment" EntitySet="DebtPayment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EventsLog_EventsDescription" Association="Self.FK_EventsLog_EventsDescription">
+      <End Role="EventsDescription" EntitySet="EventsDescription" />
+      <End Role="EventsLog" EntitySet="EventsLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PaymentMembers_Members" Association="Self.FK_PaymentMembers_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="PaymentMembers" EntitySet="PaymentMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestCheck_BankAcc" Association="Self.FK_RequestCheck_BankAcc">
+      <End Role="BankAcc" EntitySet="BankAcc" />
+      <End Role="RequestCheck" EntitySet="RequestCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignaturesAcc_BankAcc" Association="Self.FK_SignaturesAcc_BankAcc">
+      <End Role="BankAcc" EntitySet="BankAcc" />
+      <End Role="SignaturesAcc" EntitySet="SignaturesAcc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SignaturesAcc_Members" Association="Self.FK_SignaturesAcc_Members">
+      <End Role="Members" EntitySet="Members" />
+      <End Role="SignaturesAcc" EntitySet="SignaturesAcc" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

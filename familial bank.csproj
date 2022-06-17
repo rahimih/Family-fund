@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2817A932-5692-4CAC-B0F1-12106461D000}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>familial_bank</RootNamespace>
+    <AssemblyName>familial bank</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.1.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Quicken.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>familial_bank.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.Data.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.Utils.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 13.2\Components\Bin\Framework\DevExpress.XtraNavBar.v13.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Resources">
+      <HintPath>..\..\..\..\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\FarsiLibrary.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils">
+      <HintPath>..\..\..\..\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Win">
+      <HintPath>..\..\..\..\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\FarsiLibrary.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="PersianDate">
+      <HintPath>..\..\..\..\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\..\..\..\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PIHO DAYCLINIC SOFTWARE\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2014.2.617.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2014.2.617.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2014.2.617.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2014.2.617.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikData, Version=2014.2.617.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q2 2014\Bin40\TelerikData.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\BussinessClass.cs" />
+    <Compile Include="AppCode\DataAcessClass.cs" />
+    <Compile Include="AppCode\DLUtils.cs" />
+    <Compile Include="Backup_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup_F.designer.cs">
+      <DependentUpon>Backup_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Balance_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_F.Designer.cs">
+      <DependentUpon>Balance_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankAcc.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_F.designer.cs">
+      <DependentUpon>ChangePassword_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Confilict_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confilict_F.Designer.cs">
+      <DependentUpon>Confilict_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditAcc.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditAcc_bill_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtCreditAcc_bill_F.Designer.cs">
+      <DependentUpon>DebtCreditAcc_bill_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditAcc_sod_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtCreditAcc_sod_F.Designer.cs">
+      <DependentUpon>DebtCreditAcc_sod_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditKind.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtKInd.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtKind_Select_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtKind_Select_F.Designer.cs">
+      <DependentUpon>DebtKind_Select_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditAcc_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtCreditAcc_view_F.Designer.cs">
+      <DependentUpon>DebtCreditAcc_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtPrint.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_DebtPayment_status_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_DebtPayment_status_F.Designer.cs">
+      <DependentUpon>Report_DebtPayment_status_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtPayment_F_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtPayment_F_view_F.Designer.cs">
+      <DependentUpon>DebtPayment_F_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtKind_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtKind_view_F.Designer.cs">
+      <DependentUpon>DebtKind_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtMonthlyPayment.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtMonthTemp.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtPayment.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventsDescription.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventsLog.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FBModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberShipRight.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankAcc_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankAcc_view_F.Designer.cs">
+      <DependentUpon>BankAcc_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberShipRight_View_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShipRight_View_F.Designer.cs">
+      <DependentUpon>MemberShipRight_View_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankAcc_View_Select_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankAcc_View_Select_F.Designer.cs">
+      <DependentUpon>BankAcc_View_Select_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtKindView_Select_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtKindView_Select_F.Designer.cs">
+      <DependentUpon>DebtKindView_Select_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembersView_Select_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembersView_Select_F.Designer.cs">
+      <DependentUpon>MembersView_Select_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthPayment.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MonthPayment_View_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthPayment_View_F.Designer.cs">
+      <DependentUpon>MonthPayment_View_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMember.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DebtPaymentsgroup_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtPaymentsgroup_F.Designer.cs">
+      <DependentUpon>DebtPaymentsgroup_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_debtPaymentMonthly_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_debtPaymentMonthly_F.Designer.cs">
+      <DependentUpon>Report_debtPaymentMonthly_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_debtPaymentMembersSum_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_debtPaymentMembersSum_F.Designer.cs">
+      <DependentUpon>Report_debtPaymentMembersSum_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_payment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_payment_F.Designer.cs">
+      <DependentUpon>Report_payment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_payment_C.cs">
+      <DependentUpon>Report_payment_C.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report_Debt_C.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_Debt_C.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_debt_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_debt_F.Designer.cs">
+      <DependentUpon>Report_debt_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_PaymentMembersSum_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_PaymentMembersSum_F.Designer.cs">
+      <DependentUpon>Report_PaymentMembersSum_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_PaymentMonthly_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_PaymentMonthly_F.Designer.cs">
+      <DependentUpon>Report_PaymentMonthly_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMembersgroup_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMembersgroup_F.Designer.cs">
+      <DependentUpon>PaymentMembersgroup_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMembersRight_View_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMembersRight_View_F.Designer.cs">
+      <DependentUpon>PaymentMembersRight_View_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtMonthPayment_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtMonthPayment_view_F.Designer.cs">
+      <DependentUpon>DebtMonthPayment_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMembers_View_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMembers_View_F.Designer.cs">
+      <DependentUpon>PaymentMembers_View_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMonthTemp.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayoffDebtpayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayoffDebtpayment_F.Designer.cs">
+      <DependentUpon>PayoffDebtpayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayoffMembers_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayoffMembers_F.Designer.cs">
+      <DependentUpon>PayoffMembers_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_box_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_box_F.Designer.cs">
+      <DependentUpon>Report_box_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Debtpayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Debtpayment_F.Designer.cs">
+      <DependentUpon>Report_Debtpayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_monthlypayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_monthlypayment_F.Designer.cs">
+      <DependentUpon>Report_monthlypayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestCheck.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RequestCheck_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestCheck_F.Designer.cs">
+      <DependentUpon>RequestCheck_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtMonthPayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtMonthPayment_F.Designer.cs">
+      <DependentUpon>DebtMonthPayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtPayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtPayment_F.Designer.cs">
+      <DependentUpon>DebtPayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtCreditAcc_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtCreditAcc_F.Designer.cs">
+      <DependentUpon>DebtCreditAcc_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMembers_Right_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMembers_Right_F.Designer.cs">
+      <DependentUpon>PaymentMembers_Right_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentMembers_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentMembers_F.Designer.cs">
+      <DependentUpon>PaymentMembers_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequestCheck_View_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestCheck_View_F.Designer.cs">
+      <DependentUpon>RequestCheck_View_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignaturesAcc.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SignaturesAcc_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignaturesAcc_F.Designer.cs">
+      <DependentUpon>SignaturesAcc_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebtKind_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebtKind_F.Designer.cs">
+      <DependentUpon>DebtKind_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_F.Designer.cs">
+      <DependentUpon>Login_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_F.Designer.cs">
+      <DependentUpon>Main_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankAcc_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BankAcc_F.Designer.cs">
+      <DependentUpon>BankAcc_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthPayment_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthPayment_F.Designer.cs">
+      <DependentUpon>MonthPayment_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberShipRight_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberShipRight_F.Designer.cs">
+      <DependentUpon>MemberShipRight_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members_F.Designer.cs">
+      <DependentUpon>Members_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members_view_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members_view_F.Designer.cs">
+      <DependentUpon>Members_view_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TblUser.cs">
+      <DependentUpon>FBModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Backup_F.resx">
+      <DependentUpon>Backup_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_F.resx">
+      <DependentUpon>Balance_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankAcc_view_F.resx">
+      <DependentUpon>BankAcc_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword_F.resx">
+      <DependentUpon>ChangePassword_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confilict_F.resx">
+      <DependentUpon>Confilict_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtCreditAcc_bill_F.resx">
+      <DependentUpon>DebtCreditAcc_bill_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtCreditAcc_sod_F.resx">
+      <DependentUpon>DebtCreditAcc_sod_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtKind_Select_F.resx">
+      <DependentUpon>DebtKind_Select_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtCreditAcc_view_F.resx">
+      <DependentUpon>DebtCreditAcc_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_DebtPayment_status_F.resx">
+      <DependentUpon>Report_DebtPayment_status_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtPayment_F_view_F.resx">
+      <DependentUpon>DebtPayment_F_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtKind_view_F.resx">
+      <DependentUpon>DebtKind_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShipRight_View_F.resx">
+      <DependentUpon>MemberShipRight_View_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankAcc_View_Select_F.resx">
+      <DependentUpon>BankAcc_View_Select_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtKindView_Select_F.resx">
+      <DependentUpon>DebtKindView_Select_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembersView_Select_F.resx">
+      <DependentUpon>MembersView_Select_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthPayment_View_F.resx">
+      <DependentUpon>MonthPayment_View_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtPaymentsgroup_F.resx">
+      <DependentUpon>DebtPaymentsgroup_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_debtPaymentMonthly_F.resx">
+      <DependentUpon>Report_debtPaymentMonthly_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_debtPaymentMembersSum_F.resx">
+      <DependentUpon>Report_debtPaymentMembersSum_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_payment_F.resx">
+      <DependentUpon>Report_payment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_payment_C.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_payment_C.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Debt_C.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_Debt_C.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_debt_F.resx">
+      <DependentUpon>Report_debt_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_PaymentMembersSum_F.resx">
+      <DependentUpon>Report_PaymentMembersSum_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_PaymentMonthly_F.resx">
+      <DependentUpon>Report_PaymentMonthly_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMembersgroup_F.resx">
+      <DependentUpon>PaymentMembersgroup_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMembersRight_View_F.resx">
+      <DependentUpon>PaymentMembersRight_View_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtMonthPayment_view_F.resx">
+      <DependentUpon>DebtMonthPayment_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMembers_View_F.resx">
+      <DependentUpon>PaymentMembers_View_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayoffDebtpayment_F.resx">
+      <DependentUpon>PayoffDebtpayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayoffMembers_F.resx">
+      <DependentUpon>PayoffMembers_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_box_F.resx">
+      <DependentUpon>Report_box_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Debtpayment_F.resx">
+      <DependentUpon>Report_Debtpayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_monthlypayment_F.resx">
+      <DependentUpon>Report_monthlypayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestCheck_F.resx">
+      <DependentUpon>RequestCheck_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtMonthPayment_F.resx">
+      <DependentUpon>DebtMonthPayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtPayment_F.resx">
+      <DependentUpon>DebtPayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtCreditAcc_F.resx">
+      <DependentUpon>DebtCreditAcc_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMembers_Right_F.resx">
+      <DependentUpon>PaymentMembers_Right_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMembers_F.resx">
+      <DependentUpon>PaymentMembers_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestCheck_View_F.resx">
+      <DependentUpon>RequestCheck_View_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignaturesAcc_F.resx">
+      <DependentUpon>SignaturesAcc_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebtKind_F.resx">
+      <DependentUpon>DebtKind_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_F.resx">
+      <DependentUpon>Login_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_F.resx">
+      <DependentUpon>Main_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankAcc_F.resx">
+      <DependentUpon>BankAcc_F.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthPayment_F.resx">
+      <DependentUpon>MonthPayment_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberShipRight_F.resx">
+      <DependentUpon>MemberShipRight_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members_F.resx">
+      <DependentUpon>Members_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members_view_F.resx">
+      <DependentUpon>Members_view_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="FBModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FBModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FBModel.edmx</DependentUpon>
+      <LastGenOutput>FBModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="FBModel.edmx.diagram">
+      <DependentUpon>FBModel.edmx</DependentUpon>
+    </None>
+    <None Include="FBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FBModel.edmx</DependentUpon>
+      <LastGenOutput>FBModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Untitled-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Untitled-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Untitled-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\069745-blue-metallic-orb-icon-alphanumeric-plus-sign-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images_c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagesdisable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13684023251648863117icon-enable-1-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Untitled-3_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\login_form1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bakcup.jpg" />
+    <None Include="bakcup2.jpg" />
+    <None Include="images.jpg" />
+    <Content Include="Quicken.ico" />
+    <None Include="Resources\index25.jpg" />
+    <None Include="Resources\indexd.jpg" />
+    <None Include="Resources\indexdebt1.png" />
+    <None Include="Resources\indexdebt.png" />
+    <None Include="Resources\imagesdebt.jpg" />
+    <None Include="Resources\del3.jpg" />
+    <None Include="Resources\delete1.jpg" />
+    <None Include="Resources\print.jpg" />
+    <None Include="Resources\index.11jpg.jpg" />
+    <None Include="Resources\index45.jpg" />
+    <None Include="Resources\index.png" />
+    <None Include="Resources\index22.jpg" />
+    <None Include="Resources\index21.jpg" />
+    <None Include="Resources\imagesexport2.jpg" />
+    <None Include="Resources\imagesexport3.jpg" />
+    <None Include="Resources\index2.jpg" />
+    <None Include="Resources\imagesexport.jpg" />
+    <None Include="Resources\arrow icon71.jpg" />
+    <None Include="Resources\arrow icon1.jpg" />
+    <None Include="Resources\images4.jpg" />
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

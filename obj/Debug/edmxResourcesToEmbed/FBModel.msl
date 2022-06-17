@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FB_ModelStoreContainer" CdmEntityContainer="familial_bankEntities">
+    <EntitySetMapping Name="BankAccs">
+      <EntityTypeMapping TypeName="FB_Model.BankAcc">
+        <MappingFragment StoreEntitySet="BankAcc">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccNumber" ColumnName="AccNumber" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="Bnak" ColumnName="Bnak" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtKInds">
+      <EntityTypeMapping TypeName="FB_Model.DebtKInd">
+        <MappingFragment StoreEntitySet="DebtKInd">
+          <ScalarProperty Name="ReciveWageKind" ColumnName="ReciveWageKind" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="Fromdate" ColumnName="Fromdate" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="WageCash" ColumnName="WageCash" />
+          <ScalarProperty Name="DebtCash" ColumnName="DebtCash" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtMonthTemps">
+      <EntityTypeMapping TypeName="FB_Model.DebtMonthTemp">
+        <MappingFragment StoreEntitySet="DebtMonthTemp">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TimeTemp" ColumnName="TimeTemp" />
+          <ScalarProperty Name="Datetemp" ColumnName="Datetemp" />
+          <ScalarProperty Name="CashPayment" ColumnName="CashPayment" />
+          <ScalarProperty Name="CashDefault" ColumnName="CashDefault" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DebtCode" ColumnName="DebtCode" />
+          <ScalarProperty Name="MembershipCode" ColumnName="MembershipCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventsDescriptions">
+      <EntityTypeMapping TypeName="FB_Model.EventsDescription">
+        <MappingFragment StoreEntitySet="EventsDescription">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LogCode" ColumnName="LogCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventsLogs">
+      <EntityTypeMapping TypeName="FB_Model.EventsLog">
+        <MappingFragment StoreEntitySet="EventsLog">
+          <ScalarProperty Name="changecode" ColumnName="changecode" />
+          <ScalarProperty Name="Ipadress" ColumnName="Ipadress" />
+          <ScalarProperty Name="LogCode" ColumnName="LogCode" />
+          <ScalarProperty Name="logtime" ColumnName="logtime" />
+          <ScalarProperty Name="logdate" ColumnName="logdate" />
+          <ScalarProperty Name="usercode" ColumnName="usercode" />
+          <ScalarProperty Name="EventsLogCode" ColumnName="EventsLogCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="FB_Model.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="ipadress" ColumnName="ipadress" />
+          <ScalarProperty Name="userCode" ColumnName="userCode" />
+          <ScalarProperty Name="MainMemberShip" ColumnName="MainMemberShip" />
+          <ScalarProperty Name="MembershipDateCancel" ColumnName="MembershipDateCancel" />
+          <ScalarProperty Name="MembershipTime" ColumnName="MembershipTime" />
+          <ScalarProperty Name="MembershipDate" ColumnName="MembershipDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="IdentityNumber" ColumnName="IdentityNumber" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberShipRights">
+      <EntityTypeMapping TypeName="FB_Model.MemberShipRight">
+        <MappingFragment StoreEntitySet="MemberShipRight">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Cashfixed" ColumnName="Cashfixed" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthPayments">
+      <EntityTypeMapping TypeName="FB_Model.MonthPayment">
+        <MappingFragment StoreEntitySet="MonthPayment">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Cashfixed" ColumnName="Cashfixed" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMonthTemps">
+      <EntityTypeMapping TypeName="FB_Model.PaymentMonthTemp">
+        <MappingFragment StoreEntitySet="PaymentMonthTemp">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TimeTemp" ColumnName="TimeTemp" />
+          <ScalarProperty Name="Datetemp" ColumnName="Datetemp" />
+          <ScalarProperty Name="CashPayment" ColumnName="CashPayment" />
+          <ScalarProperty Name="CashDefault" ColumnName="CashDefault" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="MembershipCode" ColumnName="MembershipCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestChecks">
+      <EntityTypeMapping TypeName="FB_Model.RequestCheck">
+        <MappingFragment StoreEntitySet="RequestCheck">
+          <ScalarProperty Name="Delivery_date" ColumnName="Delivery_date" />
+          <ScalarProperty Name="transferee_user" ColumnName="transferee_user" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="Usercode" ColumnName="Usercode" />
+          <ScalarProperty Name="countt" ColumnName="countt" />
+          <ScalarProperty Name="CheckNumberTo" ColumnName="CheckNumberTo" />
+          <ScalarProperty Name="CheckNumberFrom" ColumnName="CheckNumberFrom" />
+          <ScalarProperty Name="AccCode" ColumnName="AccCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SignaturesAccs">
+      <EntityTypeMapping TypeName="FB_Model.SignaturesAcc">
+        <MappingFragment StoreEntitySet="SignaturesAcc">
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccCode" ColumnName="AccCode" />
+          <ScalarProperty Name="MembersCode" ColumnName="MembersCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsers">
+      <EntityTypeMapping TypeName="FB_Model.TblUser">
+        <MappingFragment StoreEntitySet="TblUsers">
+          <ScalarProperty Name="AccesLevel" ColumnName="AccesLevel" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMembers">
+      <EntityTypeMapping TypeName="FB_Model.PaymentMember">
+        <MappingFragment StoreEntitySet="PaymentMembers">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="kind" ColumnName="kind" />
+          <ScalarProperty Name="Cash" ColumnName="Cash" />
+          <ScalarProperty Name="PaymentTime" ColumnName="PaymentTime" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="MembersCode" ColumnName="MembersCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtPayments">
+      <EntityTypeMapping TypeName="FB_Model.DebtPayment">
+        <MappingFragment StoreEntitySet="DebtPayment">
+          <ScalarProperty Name="DebtWageKind" ColumnName="DebtWageKind" />
+          <ScalarProperty Name="ChequeNumber" ColumnName="ChequeNumber" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="PayOffTime" ColumnName="PayOffTime" />
+          <ScalarProperty Name="PayOffDate" ColumnName="PayOffDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LatenPenalty" ColumnName="LatenPenalty" />
+          <ScalarProperty Name="CashEndDate" ColumnName="CashEndDate" />
+          <ScalarProperty Name="CashFirstDate" ColumnName="CashFirstDate" />
+          <ScalarProperty Name="PaymentCash" ColumnName="PaymentCash" />
+          <ScalarProperty Name="countt" ColumnName="countt" />
+          <ScalarProperty Name="DebtWage" ColumnName="DebtWage" />
+          <ScalarProperty Name="DebtPay" ColumnName="DebtPay" />
+          <ScalarProperty Name="DebtCash" ColumnName="DebtCash" />
+          <ScalarProperty Name="StockAvg" ColumnName="StockAvg" />
+          <ScalarProperty Name="paymentTime" ColumnName="paymentTime" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="DebtKindCode" ColumnName="DebtKindCode" />
+          <ScalarProperty Name="MembersCode" ColumnName="MembersCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtCreditAccs">
+      <EntityTypeMapping TypeName="FB_Model.DebtCreditAcc">
+        <MappingFragment StoreEntitySet="DebtCreditAcc">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="FishNumber" ColumnName="FishNumber" />
+          <ScalarProperty Name="Bardasht_Cash" ColumnName="Bardasht_Cash" />
+          <ScalarProperty Name="Variz_Cash" ColumnName="Variz_Cash" />
+          <ScalarProperty Name="TimeP" ColumnName="TimeP" />
+          <ScalarProperty Name="DateP" ColumnName="DateP" />
+          <ScalarProperty Name="AccCode" ColumnName="AccCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtCreditKinds">
+      <EntityTypeMapping TypeName="FB_Model.DebtCreditKind">
+        <MappingFragment StoreEntitySet="DebtCreditKind">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Kind" ColumnName="Kind" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DebtInsertprint" FunctionName="FB_Model.Store.DebtInsertprint" />
+    <EntitySetMapping Name="DebtMonthlyPayments">
+      <EntityTypeMapping TypeName="FB_Model.DebtMonthlyPayment">
+        <MappingFragment StoreEntitySet="DebtMonthlyPayment">
+          <ScalarProperty Name="DelayDate" ColumnName="DelayDate" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IpAdress" ColumnName="IpAdress" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PayoffCash" ColumnName="PayoffCash" />
+          <ScalarProperty Name="TotalCash" ColumnName="TotalCash" />
+          <ScalarProperty Name="PenaltyCash" ColumnName="PenaltyCash" />
+          <ScalarProperty Name="DebtCash" ColumnName="DebtCash" />
+          <ScalarProperty Name="DebtNumber" ColumnName="DebtNumber" />
+          <ScalarProperty Name="DebtDateReal" ColumnName="DebtDateReal" />
+          <ScalarProperty Name="DebtDate" ColumnName="DebtDate" />
+          <ScalarProperty Name="DebtCode" ColumnName="DebtCode" />
+          <ScalarProperty Name="MembersCode" ColumnName="MembersCode" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebtPrints">
+      <EntityTypeMapping TypeName="FB_Model.DebtPrint">
+        <MappingFragment StoreEntitySet="DebtPrint">
+          <ScalarProperty Name="cash2" ColumnName="cash2" />
+          <ScalarProperty Name="debt1" ColumnName="debt1" />
+          <ScalarProperty Name="cash1" ColumnName="cash1" />
+          <ScalarProperty Name="Debtnumber" ColumnName="Debtnumber" />
+          <ScalarProperty Name="Debtcode" ColumnName="Debtcode" />
+          <ScalarProperty Name="code" ColumnName="code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

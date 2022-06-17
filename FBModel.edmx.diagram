@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac2951d8830849cab59fb5f877f2bda2" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="FB_Model.BankAcc" Width="1.5" PointX="5.75" PointY="4.375" />
+        <EntityTypeShape EntityType="FB_Model.DebtKInd" Width="1.5" PointX="0.75" PointY="3.375" />
+        <EntityTypeShape EntityType="FB_Model.DebtMonthTemp" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FB_Model.EventsDescription" Width="1.5" PointX="10.75" PointY="1.375" />
+        <EntityTypeShape EntityType="FB_Model.EventsLog" Width="1.5" PointX="13" PointY="1" />
+        <EntityTypeShape EntityType="FB_Model.Member" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="FB_Model.MemberShipRight" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FB_Model.MonthPayment" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="FB_Model.PaymentMonthTemp" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="FB_Model.RequestCheck" Width="1.5" PointX="8" PointY="14" />
+        <EntityTypeShape EntityType="FB_Model.SignaturesAcc" Width="1.5" PointX="8" PointY="9.75" />
+        <EntityTypeShape EntityType="FB_Model.TblUser" Width="1.5" PointX="10.75" PointY="8.75" />
+        <AssociationConnector Association="FB_Model.FK_RequestCheck_BankAcc" />
+        <AssociationConnector Association="FB_Model.FK_SignaturesAcc_BankAcc" />
+        <AssociationConnector Association="FB_Model.FK_EventsLog_EventsDescription" />
+        <AssociationConnector Association="FB_Model.FK_SignaturesAcc_Members" />
+        <EntityTypeShape EntityType="FB_Model.PaymentMember" Width="1.5" PointX="3" PointY="15.5" />
+        <AssociationConnector Association="FB_Model.FK_PaymentMembers_Members" />
+        <EntityTypeShape EntityType="FB_Model.DebtPayment" Width="1.5" PointX="11" PointY="11.75" />
+        <AssociationConnector Association="FB_Model.FK_DebtPayment_DebtKInd" />
+        <AssociationConnector Association="FB_Model.FK_DebtPayment_Members" />
+        <EntityTypeShape EntityType="FB_Model.DebtCreditAcc" Width="1.5" PointX="8" PointY="4.5" />
+        <AssociationConnector Association="FB_Model.FK_DebtCreditAcc_BankAcc" />
+        <EntityTypeShape EntityType="FB_Model.DebtCreditKind" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="FB_Model.FK_DebtCreditAcc_DebtCreditKind" />
+        <EntityTypeShape EntityType="FB_Model.DebtMonthlyPayment" Width="1.5" PointX="13.25" PointY="10.875" />
+        <EntityTypeShape EntityType="FB_Model.DebtPrint" Width="1.5" PointX="3.375" PointY="9.75" />
+        <AssociationConnector Association="FB_Model.FK_DebtMonthlyPayment_DebtPayment" />
+        <AssociationConnector Association="FB_Model.FK_DebtMonthlyPayment_Members" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
